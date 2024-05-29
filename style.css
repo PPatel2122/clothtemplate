@@ -7,7 +7,10 @@
 .left {
     margin-top: 20px;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 .right {
     margin-top: 40px;
     display: flex;
@@ -29,6 +32,7 @@ hr {
     height: 600px;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 .we{
     color: white;
@@ -77,29 +81,53 @@ font-size: 15px;
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .ccc{
         position: absolute;
-        display: flex;
-        justify-content: center;
-        width: 100px;
-        height: 100px;
+        bottom: -250px;
+        left: 15px;
+        width: 230px;
+        height: 210px;
         color: white;
         background-color: rgb(37, 33, 33);
-        transition: all 0.5s;
+        transition: all 1s;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+       
+}
+.wo{
+    position: absolute;
+    top: -40px;
+    left: 55px;
+    padding: 0px;
+    font-size: 35px;
+}
+.dis{
+    
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
 }
 
 
 .box-1:hover .ccc{
    
-   scale: 2;
+   transform: translateY(-260px);
 }
 .pop{
+    
+    font-size: 15px;
+    position: absolute;
+    top: 65px;
+    text-align: center;
+    padding: 0px;
     color: white;
 }
 
@@ -138,19 +166,30 @@ color: white;
 }
 .cccc{
     position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    color: white;
-    background-color: rgb(37, 33, 33);
-    transition: all 0.5s;
-    overflow: hidden;
+        bottom: -250px;
+        left: 15px;
+        width: 230px;
+        height: 210px;
+        color: white;
+        background-color: rgb(37, 33, 33);
+        transition: all 1s;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+       
 }
 .box-2:hover .cccc{
    
-    scale: 2;
+    transform: translateY(-260px);
  }
+ .woo{
+    position: absolute;
+    top: -40px;
+    left: 80px;
+    padding: 0px;
+    font-size: 35px;
+}
 
 .box-3 {
     background-image: url(./baner-right-image-03.jpg);
@@ -168,18 +207,29 @@ color: white;
 }
 .ccccc{
     position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
+    bottom: -250px;
+    left: 15px;
+    width: 230px;
+    height: 210px;
     color: white;
     background-color: rgb(37, 33, 33);
-    transition: all 0.5s;
+    transition: all 1s;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.wooo{
+    position: absolute;
+    top: -40px;
+    left: 80px;
+    padding: 0px;
+    font-size: 35px;
 }
 .box-3:hover .ccccc{
    
-    scale: 2;
+    transform: translateY(-260px);
  }
 
 .box-4 {
@@ -198,18 +248,29 @@ color: white;
 }
 .cccccc{
     position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
+    bottom: -250px;
+    left: 15px;
+    width: 230px;
+    height: 210px;
     color: white;
     background-color: rgb(37, 33, 33);
-    transition: all 0.5s;
+    transition: all 1s;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.woooo{
+    position: absolute;
+    top: -40px;
+    left: 35px;
+    padding: 0px;
+    font-size: 35px;
 }
 .box-4:hover .cccccc{
    
-    scale: 2;
+    transform: translateY(-260px);
  }
 
 .menpage{
@@ -218,14 +279,20 @@ color: white;
     height: 90vh;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 .menheading{
+    position: absolute;
+    top: -30px;
+    left: 120px;
     display: flex;
     flex-direction: column;
-    
-    
-}
+    }
+    span{
+        padding: 0px;
+    }
 .names{
+    padding: 0px;
     font-size: 34px;
     font-weight: 700;
 }
@@ -263,6 +330,62 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.menhover{
+    width: 340px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    position: absolute;
+    bottom: -70px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.menimg1:hover .menhover{
+    transform: translateY(-80px);
+
+}
+.menimg2:hover .menhover{
+    transform: translateY(-80px);
+
+}
+.menimg3:hover .menhover{
+    transform: translateY(-80px);
+
+}
+.menhover1{
+    background-image: url(./eyes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.menhover2{
+    background-image: url(./star.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.menhover3{
+    background-image: url(./shoping.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
 }
 .two{
     width: 350px;
@@ -275,6 +398,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 .three{
     width: 350px;
@@ -287,6 +412,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 .womenpage{
@@ -295,10 +422,14 @@ span{
     height: 90vh;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 .womenheading{
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: -30px;
+    left: 120px;
     
     
 }
@@ -310,7 +441,63 @@ span{
     gap: 25px;
 }
 
+.womenhover1{
+    background-image: url(./eyes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    
+}
+.womenhover2{
+    background-image: url(./star.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.womenhover3{
+    background-image: url(./shoping.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.womenhover{
+    width: 340px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    position: absolute;
+    bottom: -70px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.womenimg1:hover .womenhover{
+    transform: translateY(-80px);
 
+}
+.womenimg2:hover .womenhover{
+    transform: translateY(-80px);
+
+}
+.womenimg3:hover .womenhover{
+    transform: translateY(-80px);
+
+}
 
 .womenimg1{
     background-image: url(./women-01.jpg);
@@ -318,6 +505,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 .womenimg2{
@@ -326,6 +515,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 .womenimg3{
@@ -334,6 +525,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -343,10 +536,14 @@ span{
     height: 90vh;
     align-items: center;
     flex-direction: column;
+   position: relative;
 }
 .kidheading{
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: -30px;
+    left: 120px;
     
     
 }
@@ -358,7 +555,60 @@ span{
     gap: 25px;
 }
 
+.kidhover1{
+    background-image: url(./eyes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.kidhover2{
+    background-image: url(./star.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.kidhover3{
+    background-image: url(./shoping.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 50px;
+    height: 45px;
+    border: 2px solid white;
+    background-color: white;
+}
+.kidhover{
+    width: 340px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    position: absolute;
+    bottom: -70px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.kidimg1:hover .kidhover{
+    transform: translateY(-80px);
 
+}
+.kidimg2:hover .kidhover{
+    transform: translateY(-80px);
+
+}
+.kidimg3:hover .kidhover{
+    transform: translateY(-80px);
+
+}
 
 .kidimg1{
     background-image: url(./kid-01.jpg);
@@ -366,6 +616,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 .kidimg2{
@@ -374,6 +626,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 .kidimg3{
@@ -382,6 +636,8 @@ span{
     background-size: cover;
     width: 350px;
     height: 350px;
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -455,13 +711,34 @@ button{
     flex-direction: column;
     height: 80vh;
     align-items: center;
+    position: relative;
 }
 .SocialMediaphoto{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    position: absolute;
+    top: 150px;
+
     
+}
+.SocialMediaheading{
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+.new3{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    
+}
+.new2{
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
 }
 .fashion{
     background-image: url(./instagram-01.jpg);
@@ -469,13 +746,44 @@ button{
     background-size: cover;
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
 }
+.fashionhover{
+    width: 199px;
+    height: 199px;
+    background-color: rgba(0, 0, 0, 0.815);
+    position: absolute;
+    left: 0px;
+    bottom: -200px;
+    overflow: hidden;
+    transition: all 0s;
+}
+.fashion:hover .fashionhover{
+    transform: translateY(-200px);
+}
+
 .new{
     background-image: url(./instagram-02.jpg);
     background-position: center;
     background-size: cover;
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.newhover{
+    width: 199px;
+    height: 199px;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: absolute;
+    left: 0px;
+    bottom: -200px;
+    overflow: hidden;
+    transition: all 0s;
+}
+.new:hover .newhover{
+    transform: translateY(-200px);
 }
 .brand{
     background-image: url(./instagram-03.jpg);
@@ -483,6 +791,21 @@ button{
     background-size: cover;
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.brandhover{
+    width: 199px;
+    height: 199px;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: absolute;
+    left: 0px;
+    bottom: -200px;
+    overflow: hidden;
+    transition: all 0s;
+}
+.brand:hover .brandhover{
+    transform: translateY(-200px);
 }
 .makeup{
     background-image: url(./instagram-04.jpg);
@@ -490,6 +813,21 @@ button{
     background-size: cover;
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.makeuphover{
+    width: 199px;
+    height: 199px;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: absolute;
+    left: 0px;
+    bottom: -200px;
+    overflow: hidden;
+    transition: all 0s;
+}
+.makeup:hover .makeuphover{
+    transform: translateY(-200px);
 }
 .leather{
     background-image: url(./instagram-05.jpg);
@@ -497,6 +835,21 @@ button{
     background-size: cover;
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.leatherhover{
+    width: 199px;
+    height: 199px;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: absolute;
+    left: 0px;
+    bottom: -200px;
+    overflow: hidden;
+    transition: all 0s;
+}
+.leather:hover .leatherhover{
+    transform: translateY(-200px);
 }
 .bag{
     background-image: url(./instagram-06.jpg);
@@ -504,7 +857,23 @@ button{
     background-size: cover;
     width: 200px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
 }
+.baghover{
+    width: 199px;
+    height: 199px;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: absolute;
+    left: 0px;
+    bottom: -200px;
+    overflow: hidden;
+    transition: all 0s;
+}
+.bag:hover .baghover{
+    transform: translateY(-200px);
+}
+
 .about{
     display: flex;
     flex-direction: row;
@@ -561,41 +930,136 @@ button{
     
 }
 .foot{
+    position: relative;
     display: flex;
     justify-content: center;
     height: 60vh;
     align-items: center;
     background-color:  rgb(42, 42, 42);
 }
-.ul{
-    list-style-type: none;
+.tooplogo{
+    background-image: url(./white-logo.png);
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 60px;
+    margin-bottom: 20px;
 }
-.foot{
+.toop{
+    position: absolute;
+    top: 20px;
     display: flex;
-    justify-content: space-around;
     flex-direction: row;
+    justify-content: space-around;
+    width: 1000px;
 }
-.hexalogo{
+.foothr{
+    margin-top: 50px;
+    border: none;
+    border-top: 0.5px solid white;
+    width: 80%;
+}
+.toopfontt{
     color: white;
 }
+.toopfont{
+    color: white;
+    font-size: 15px;
+    font-style: normal;
+}
+.footdown{
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+}
+.footicon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -110px;
+    
+    width: 370px;
+    height: 80px;
+}
+.footface{
+    background-image: url(./facebook.png);
+    background-size: cover;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+}
+.foottw{
+    background-image: url(./tww.png);
+    background-size: cover;
+  background-position: center;
+    width: 35px;
+    height: 35px;
+}
+.footli{
+    background-image: url(./linkk.png);
+    background-size: cover;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+}
+.footbe{
+    background-image: url(./beee.png);
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+}
+
 @media screen and (min-width:300px) and (max-width:600px) {
-    .main {
-        
-        gap: 25px;
-        height: 600px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+   .main{
+    margin-top: 100px;
+    flex-direction: column;
+   }
+    .photo {
+        position: absolute;
+        left: 20px;
+        margin-top: 20px;
+        width: 1000px;
+        height: 1000px;
+        }  
     .grid {
-        
-        grid-template-columns: 255px ;
-        grid-template-rows: 237px 237px 237px 237px;
+        overflow: hidden;
+        grid-template-columns: 1000px;
+        grid-template-rows: 1000px 1000px 1000px 1000px;
         gap: 25px;
         height: 500px;
         width: 550px;
-        flex-direction: column;
-    
     }
-
+    .box-1 {
+        
+        grid-column: 1/2;
+        grid-row: 1/2;
+       }
+       .box-2 {
+        
+        grid-column: 1/2;
+        grid-row: 2/3;
+       }
+       .box-3 {
+        
+        grid-column: 1/2;
+        grid-row: 3/4;
+       }
+       .box-4 {
+        
+        grid-column: 1/2;
+        grid-row: 4/5;
+       }
+       
+       .toop{
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 1000px;
+    }
+   
 }
