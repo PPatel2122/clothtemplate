@@ -10,30 +10,42 @@
 
 <body>
     <div class="ALL">
-        <div class="header">
-            <div class="left">
+        <section class="ham-nav">
+            
                 <div class="hexashop"><img src="./logo.png"></div>
-            </div>
-            <div class="right">
-                <a href="#homepagee"><div class="home">Home</div></a>
-                <a href="#manpagee"><div class="men">Men's</div></a>
-                <a href="#womanpagee"><div class="women">Women's</div></a>
-                <a href="#kidpagee"><div class="kid">Kid's</div></a>
-                <a href="#pagepagee"><div class="page">Pages</div></a>
-                <a href="#reaturepagee"><div class="feature">Features</div></a>
-                <a href="#explorepagee"><div class="explore">Explore</div></a>
-            </div>
-        </div>
+            
+                <input id="menu-toggle" type="checkbox" />
+  
+                <label class="menu-button-container" for="menu-toggle">
+                  <div class="menu-button"></div>
+                </label>
+                
+            <ul class="ham-menu">
+                <a href="#homepagee"><li class="home">Home</li></a>
+                <a href="#manpagee"><li class="men">Men's</li></a>
+                <a href="#womanpagee"><li class="women">Women's</li></a>
+                <a href="#kidpagee"><li class="kid">Kid's</li></a>
+                <a href="#pagepagee"><li class="page">Pages</li></a>
+                <a href="#reaturepagee"><li class="feature">Features</li></a>
+                <a href="#explorepagee"><li class="explore">Explore</li></a>
+            </ul>
+        </section>
         <hr>
-        <div class="main" id="#homepagee">
+        
+
+        <!-- <div class="main" id="#homepagee">
             <div class="mainleft">
                 <div class="photo">
                     <h1 class="we">We Are Hexashop</h1>
                     <p class="awe">Awesome, clean & creative HTML5 Template.</p>
                 </div>
-            </div>
+            </div> -->
             <div class="mainright">
                 <div class="grid">
+                    <div class="box-0">
+                        <h1 class="we">We Are Hexashop</h1>
+                        <p class="awe">Awesome, clean & creative HTML5 Template.</p>
+                    </div>
                     <div class="box-1">
                         <div class="inner">
                             <h4 class="h44">Women</h4>
@@ -92,7 +104,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <hr>
 
         <div class="menpage" id="manpagee">
@@ -102,6 +114,7 @@
                 <span>Details to details is what makes Hexashop different from the other themes.</span>
             </div>
             <div class="menphoto">
+                <div class="mensliderleft"></div>
                 <div class="one">
                     <div class="menimg1"> 
                      <div class="menhover">
@@ -122,7 +135,6 @@
                          </div>
                     </div>
                     <h4 class="clothname">Air Force 1X</h4>
-
                     <span>$90.00</span>
                 </div>
                 <div class="three">
@@ -136,6 +148,7 @@
                     <h4 class="clothname">Love Nana 20</h4>
                     <span>$150.00</span>
                 </div>
+                <div class="mensliderright"></div>
             </div>
         </div>
         <hr>
@@ -145,6 +158,7 @@
                 <span>Details to details is what makes Hexashop different from the other themes.</span>
             </div>
             <div class="womenphoto">
+                <div class="womensliderleft"></div>
                 <div class="one">
                     <div class="womenimg1">
                         <div class="womenhover">
@@ -178,6 +192,7 @@
                     <h4 class="clothname">Spring Collection</h4>
                     <span>$130.00</span>
                 </div>
+                <div class="womensliderright"></div>
             </div>
         </div>
         <hr>
@@ -187,6 +202,7 @@
                 <span>Details to details is what makes Hexashop different from the other themes.</span>
             </div>
             <div class="kidphoto">
+                <div class="kidsliderleft"></div>
                 <div class="one">
                     <div class="kidimg1">
                         <div class="kidhover">
@@ -220,6 +236,7 @@
                     <h4 class="clothname">Classic Kid</h4>
                     <span>$30.00</span>
                 </div>
+                <div class="kidsliderright"></div>
             </div>
         </div>
         <hr>
@@ -236,14 +253,15 @@
                 <button>Discover More</button>
             </div>
             <div class="xploreright">
-                <div class="grid">
+                <div class="grid-2">
                     <div class="box-11">
                         <h4 class="menphoto">Leather Bags</h4><span>Latest Collection</span>
                     </div>
                     <div class="box-12"></div>
                     <div class="box-13"></div>
                     <div class="box-14">
-                        <h4>Different Types</h4><span>Over 304 Products</span>
+                        <h4>Different Types</h4>
+                        <span>Over 304 Products</span>
                     </div>
                 </div>
             </div>
@@ -333,36 +351,37 @@
            <div class="toop">
             <div class="toop1">
                 <div class="tooplogo"></div>
-                <a href="#"><p class="toopfont">16501 Collins Ave, Sunny Isles Beach, FL 33160,<br> United States</p></a>
-                <a href="#"><p class="toopfont">hexashop@company.com</p></a>
-                <a href="#"><p class="toopfont">010-020-0340</p></a>
+                <p class="toopfont">16501 Collins Ave, Sunny Isles Beach, FL 33160,<br> United States</p>
+               <p class="toopfont">hexashop@company.com</p>
+                <p class="toopfont">010-020-0340</p>
             </div>
             <div class="toop2">
                 <h2 class="toopfontt">Shopping & Categeries</h2>
-                <a href="#"><P class="toopfont">Men's shopping</P></a>
-                <a href="#"><p class="toopfont">Women's shopping</p></a>
-                <a href="#"><p class="toopfont">Kid's shopping</p></a>
+                <P class="toopfont">Men's shopping</P>
+                <p class="toopfont">Women's shopping</p>
+                <p class="toopfont">Kid's shopping</p>
             </div>
             <div class="toop3">
                 <h2 class="toopfontt">Useful Links</h2>
-                <a href="#"><P class="toopfont">HomePage</P></a>
-                <a href="#"><p class="toopfont">About Us</p></a>
-                <a href="#"><p class="toopfont">Help</p></a>
-                <a href="#"> <p class="toopfont">Contact US</p></a>
+                <P class="toopfont">HomePage</P>
+                <p class="toopfont">About Us</p>
+                <p class="toopfont">Help</p>
+                <p class="toopfont">Contact US</p>
             </div>
             <div class="toop4">
                 <h2 class="toopfontt">Help & Information</h2>
-                <a href="#"><p class="toopfont">Help</p></a>
-                <a href="#"><p class="toopfont">FAQ's</p></a>
-                <a href="#"><p class="toopfont">Shipping</p></a>
-                <a href="#"><p class="toopfont">Tracking ID</p></a>
+                <p class="toopfont">Help</p>
+                <p class="toopfont">FAQ's</p>
+                <p class="toopfont">Shipping</p>
+                <p class="toopfont">Tracking ID</p>
             </div>
            </div>
            <hr class="foothr">
            <div class="footdown">
-            <a href="#"><P class="toopfont">Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.</P></a>
-            <a href="#"><p class="toopfont">Design: TemplateMo</p></a>
-            <hr>
+            <P class="toopfont">Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.</P>
+            <p class="toopfont">Design: TemplateMo</p>
+           </div>
+           
             <div class="footicon">
                 <div class="footface"></div>
                 <div class="foottw"></div>
@@ -370,8 +389,8 @@
                 <div class="footbe"></div>
 
             </div>
-
-           </div>
+        
+          
 
         </div>
     </div>

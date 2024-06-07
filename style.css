@@ -1,24 +1,144 @@
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+*{
+    padding: 0px;
+    margin: 0px;
 }
-
-.left {
-    margin-top: 20px;
-}
-a{
-    text-decoration: none;
+h2 {
+    text-align: center;
+  }
+  .hexashop{
+    text-shadow: 2px 2px 4px #000000;
+    color:white;
+  }
+ li{
     color: black;
-}
-.right {
-    margin-top: 40px;
+    font-size: 18px;
+    text-decoration: none;
+ }
+  .ham-nav {
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    font-size: 20px;
-    font-weight: bold;
-}
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    height: 65px;
+    padding: 1em;
+    font-weight:bolder;
+    font-size:25px;
+    
+  }
+  
+  .ham-menu li:hover{
+    color:white;
+    cursor:pointer;
+  }
+  
+  .ham-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    gap: 15px;
+  }
+  
+  .ham-menu > li {
+    margin: 0 16px;
+    overflow: hidden;
+  }
+  /*Container for menu button  */
+  .menu-button-container {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+  }
+
+
+
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  /*  Creating the menu button */
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #090909;
+    position: absolute;
+    height: 6px;
+    width: 32px;
+    border-radius: 3px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+
+  
+  /*  Adding Functionality to the Hamburger Menu with CSS  */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+  /*  transforms the hamburger icon into a cross  */
+    transform: rotate(-45deg);
+  }
+  
+
+  /* Making the navbar responsive by CSS Media Queries */
+@media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .ham-menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .ham-menu li {
+      height: 0px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    #menu-toggle:checked ~ .ham-menu li {
+      border: 1px solid #9f9a9a;
+      height: 70px;
+      padding: 0.5em;
+    }
+    .ham-menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: black;
+      background-color: #E8E8E8;
+      transition: all 1s ease;
+      
+    }
+    
+  }
 
 hr {
     border: none;
@@ -28,11 +148,17 @@ hr {
 
 .main {
     display: flex;
-    gap: 25px;
-    height: 600px;
+    gap: 55px;
+    height: auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    
+}
+.mainright{
+    height: auto;
+    width: 100%;
 }
 .we{
     color: white;
@@ -46,36 +172,40 @@ font-size: 15px;
 }
 
 
-.photo {
-    background-image: url(./left-banner-image.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 750px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    flex-direction: column;
-}
+
+
+
 
 .grid {
     display: flex;
     justify-content: center;
     display: grid;
-    grid-template-columns: 255px 255px;
+    grid-template-columns: 700px 280px 280px;
     grid-template-rows: 237px 237px;
     gap: 25px;
-    height: 500px;
-    width: 550px;
+    height: auto;
+    width: 100%;
 
+}
+.box-0{
+    
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(./left-banner-image.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
 }
 
 .box-1 {
     background-image: url(./baner-right-image-01.jpg);
     background-position: center;
     background-size: cover;
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 1/2;
     overflow: hidden;
     position: relative;
@@ -154,7 +284,7 @@ color: white;
     background-image: url(./baner-right-image-02.jpg);
     background-position: center;
     background-size: cover;
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 1/2;
     overflow: hidden;
     position: relative;
@@ -195,7 +325,7 @@ color: white;
     background-image: url(./baner-right-image-03.jpg);
     background-position: center;
     background-size: cover;
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 2/3;
     overflow: hidden;
     position: relative;
@@ -236,7 +366,7 @@ color: white;
     background-image: url(./baner-right-image-04.jpg);
     background-position: center;
     background-size: cover;
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 2/3;
     overflow: hidden;
     position: relative;
@@ -283,24 +413,48 @@ color: white;
 }
 .menheading{
     position: absolute;
-    top: -30px;
+    top: 10px;
     left: 120px;
     display: flex;
+    margin: 0px;
+    padding: 0px;
     flex-direction: column;
     }
     span{
         padding: 0px;
     }
 .names{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px;
     padding: 0px;
     font-size: 34px;
     font-weight: 700;
+    text-align: start;
 }
 
 .menphoto{
     display: flex;
     flex-direction: row;
     gap: 25px;
+}
+.mensliderleft{
+background-image: url(./prev.png);
+background-position: center;
+background-size: cover;
+width: 50px;
+height: 50px;
+position: relative;
+top: 150px;
+}
+.mensliderright{
+    background-image: url(./next.png);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 150px;
 }
 .clothname{
     font-size: 22px;
@@ -424,12 +578,32 @@ span{
     flex-direction: column;
     position: relative;
 }
+.womensliderright{
+    background-image: url(./next.png);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+}
+.womensliderleft{
+    background-image: url(./prev.png);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+}
 .womenheading{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: -30px;
+    padding: 0px;
+    margin: 0px;
     left: 120px;
+    top: 10px;
     
     
 }
@@ -542,10 +716,30 @@ span{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: -30px;
+    top: 10px;
     left: 120px;
+    margin: 0px;
+    padding: 0px;
     
     
+}
+.kidsliderright{
+     background-image: url(./next.png);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+}
+.kidsliderleft{
+    background-image: url(./prev.png);
+   background-position: center;
+   background-size: cover;
+   width: 50px;
+   height: 50px;
+   position: relative;
+   top: 150px;
 }
 
 
@@ -644,6 +838,7 @@ span{
 
 .xplore{
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -653,10 +848,11 @@ span{
 
 
 .xploreleft{
-    width: 650px;
+    width: 50%;
     height: 500px;
    
 }
+
 p{
     font-style: italic;
     color: rgb(42, 42, 42);
@@ -669,7 +865,16 @@ button{
     border-radius: 0%;
 }
 
-
+.grid-2{
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px;
+    gap: 25px;
+    height: auto;
+    width: 100%;
+}
 
 .box-11 {
     background-color:  rgb(248, 248, 248);
@@ -883,18 +1088,19 @@ button{
     gap: 50px;
 }
 .aboutleft{
-    width: 700px;
+    width: 55%;
     height: 300px;
     
 
 }
-
+.aboutright{
+    width: 30%;
+}
 
 .aboutright-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    
     height: 300px;
     width: 400px;
 }
@@ -947,12 +1153,16 @@ button{
 }
 .toop{
     position: absolute;
-    top: 20px;
+    top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 1000px;
+    height: 30vh;
+    padding: 0px;
+    margin: 0px;
 }
+
 .foothr{
     margin-top: 50px;
     border: none;
@@ -969,18 +1179,21 @@ button{
 }
 .footdown{
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
 .footicon{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: absolute;
-    bottom: -110px;
-    
+    bottom: 0px;
     width: 370px;
-    height: 80px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
 }
 .footface{
     background-image: url(./facebook.png);
@@ -992,7 +1205,7 @@ button{
 .foottw{
     background-image: url(./tww.png);
     background-size: cover;
-  background-position: center;
+    background-position: center;
     width: 35px;
     height: 35px;
 }
@@ -1012,54 +1225,143 @@ button{
 }
 
 @media screen and (min-width:300px) and (max-width:600px) {
-   .main{
-    margin-top: 100px;
+   /* main page phone viwe */
+   .main {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-   }
-    .photo {
-        position: absolute;
-        left: 20px;
-        margin-top: 20px;
-        width: 1000px;
-        height: 1000px;
-        }  
-    .grid {
-        overflow: hidden;
-        grid-template-columns: 1000px;
-        grid-template-rows: 1000px 1000px 1000px 1000px;
-        gap: 25px;
-        height: 500px;
-        width: 550px;
+    
+}
+.we{
+    font-size: 60px;
+    text-align: center;
+  }
+.grid {
+    grid-template-columns: 310px;
+    grid-template-rows: 280px 280px 280px 280px 280px ;
+    gap: 10px;
+    height: auto;
+}
+.box-0{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.box-1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.box-2{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.box-3{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.box-4{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+/* menpage phone viwe */
+.menpage{
+    display: flex;
+    justify-content: center;
+    height: 650px;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+.menheading{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    
+    
     }
-    .box-1 {
-        
-        grid-column: 1/2;
-        grid-row: 1/2;
-       }
-       .box-2 {
-        
-        grid-column: 1/2;
-        grid-row: 2/3;
-       }
-       .box-3 {
-        
-        grid-column: 1/2;
-        grid-row: 3/4;
-       }
-       .box-4 {
-        
-        grid-column: 1/2;
-        grid-row: 4/5;
-       }
-       
-       .toop{
+    .menphoto{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        overflow: hidden;
+        align-self: start;
+        width: 350px;
+        height: 420px;
+
+    }
+    .one{
+        width: 350px;
+        height: 300px;
+     
+    }
+    .menimg1{
+        background-image: url(./men-01.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 310px;
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+    }
+    .menhover{
+        width: 340px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0px;
         position: absolute;
-        top: 20px;
-        left: 50px;
+        bottom: -70px;
+        overflow: hidden;
+        transition: all 1s;
+    }
+
+    .about{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        width: 1000px;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        gap: 10px;
     }
-   
+    .aboutleft{
+        width: 50%;
+        height: 300px;
+        
+    
+    }
+    .aboutright{
+        width: 250px ;
+        align-self: start;
+    }
+       /* foot  */
+    .foot{
+        height: 800px;
+        background-color: rgb(42, 42, 42);
+    }
+    .toop{
+        position: absolute;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 30vh;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .tooplogo{
+        background-image: url(./white-logo.png);
+        background-position: center;
+        background-size: cover;
+        width: 200px;
+        height: 60px;
+        margin-bottom: 20px;
+
+    }
+    .toop1{
+     align-items: center;
+     
+    }
 }
